@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>FinanceTracker</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="active"><a href="#">Add Expense</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="budgets.html">Budgets</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <h1>Add New Expense</h1>
+
+        <form class="expense-form">
+            <label>Date</label>
+            <input type="date">
+
+            <label>Description</label>
+            <input type="text" placeholder="e.g. Grocery shopping">
+
+            <label>Category</label>
+            <select>
+                <option>Food</option>
+                <option>Bills</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+            </select>
+
+            <label>Amount</label>
+            <input type="number" placeholder="₹">
+
+            <button type="submit" class="add-btn">Save Expense</button>
+        </form>
+    </main>
+
+</div>
+
+</body>
+</html>

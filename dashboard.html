@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>FinanceTracker</h2>
+        <ul>
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="budgets.html">Budgets</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Dashboard Overview</h1>
+
+            <div class="header-buttons">
+                <a href="add-income.html" class="income-btn">+ Add Income</a>
+                <a href="add-expense.html" class="add-btn">+ Add Expense</a>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+            <div class="card balance">
+                <h3>Total Balance</h3>
+                <p>₹ 52,300</p>
+            </div>
+
+            <div class="card income">
+                <h3>Total Income</h3>
+                <p>₹ 80,000</p>
+            </div>
+
+            <div class="card expense">
+                <h3>Total Expenses</h3>
+                <p>₹ 27,700</p>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <h2>Monthly Expense Breakdown</h2>
+
+        <div class="chart">
+            <div class="bar food" style="height: 60%">Food</div>
+            <div class="bar bills" style="height: 40%">Bills</div>
+            <div class="bar travel" style="height: 30%">Travel</div>
+            <div class="bar shopping" style="height: 50%">Shopping</div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>

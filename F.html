@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features - Finance Tracker</title>
+  <link rel="stylesheet" href="f.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">FinanceTracker</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="F.html" class="active">Features</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <h1>Powerful Features to Manage Your Finances</h1>
+  <p>Track, analyze and grow your money with smart tools.</p>
+</section>
+
+<!-- ================= FEATURES GRID ================= -->
+<section class="features-section">
+
+  <div class="feature-card">
+    <div class="icon">💰</div>
+    <h3>Expense Tracking</h3>
+    <p>Easily log your daily expenses and categorize them.</p>
+  </div>
+
+<a href="visualize.html" class="feature-card link-card">
+  <div class="icon">📊</div>
+  <h3>Visual Reports</h3>
+  <p>View expense insights with charts.</p>
+</a>
+
+
+
+
+  <div class="feature-card">
+    <div class="icon">📅</div>
+    <h3>Monthly Budget</h3>
+    <p>Create custom budgets and track your progress.</p>
+  </div>
+
+  <!-- SMART ALERTS CARD -->
+  <a href="#alerts" class="feature-card link-card">
+    <div class="icon">🔔</div>
+    <h3>Smart Alerts</h3>
+    <p>Receive reminders for bills, budgets and goals.</p>
+  </a>
+
+  <div class="feature-card">
+    <div class="icon">🔒</div>
+    <h3>Secure Data</h3>
+    <p>Your financial information stays private and safe.</p>
+  </div>
+
+  <!-- EASY EXPORT CARD -->
+  <div class="feature-card export-card" onclick="openExportModal()">
+    <div class="icon">📥</div>
+    <h3>Easy Export</h3>
+    <p>Download your reports in multiple formats.</p>
+  </div>
+
+</section>
+
+<!-- ================= SMART ALERTS SECTION ================= -->
+<section id="alerts" class="alerts-section">
+  <h2>🔔 Smart Alerts & Reminders</h2>
+  <p>Set reminders to stay on top of your finances.</p>
+
+  <form class="alerts-form">
+
+    <div class="form-group">
+      <label>Reminder Type</label>
+      <select>
+        <option>Bill Payment</option>
+        <option>Budget Limit</option>
+        <option>Savings Goal</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Reminder Date</label>
+      <input type="date" required />
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <input type="text" placeholder="e.g. Pay electricity bill" required />
+    </div>
+
+    <button type="submit">Save Reminder</button>
+
+  </form>
+
+  <a href="#top" class="close-btn">Close</a>
+</section>
+
+<!-- ================= EXPORT MODAL ================= -->
+<div id="exportModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeExportModal()">&times;</span>
+    <h2>Export Reports</h2>
+
+    <label>Choose Format</label>
+    <select id="exportFormat">
+      <option>PDF</option>
+      <option>CSV</option>
+      <option>Excel</option>
+    </select>
+
+    <label>From Date</label>
+    <input type="date">
+
+    <label>To Date</label>
+    <input type="date">
+
+    <button onclick="exportData()">Export</button>
+    <p id="exportMsg"></p>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 FinanceTracker. All rights reserved.</p>
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openExportModal() {
+  document.getElementById("exportModal").style.display = "flex";
+}
+
+function closeExportModal() {
+  document.getElementById("exportModal").style.display = "none";
+}
+
+function exportData() {
+  const format = document.getElementById("exportFormat").value;
+  document.getElementById("exportMsg").innerText =
+    "✅ Report successfully exported as " + format;
+}
+</script>
+
+</body>
+</html>
